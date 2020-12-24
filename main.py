@@ -9,7 +9,7 @@ import random
 
 def freestyle_driver(freestyle_prompts: dict):
     while True:
-        word_key = str(random.randint(1 , len(freestyle_prompts)))
+        word_key = str(random.randint(1, len(freestyle_prompts)))
         prompt = freestyle_prompts[word_key]
         print(prompt)
         input()

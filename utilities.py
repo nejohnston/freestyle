@@ -11,10 +11,12 @@ def FREESTYLE_PROMPTS_PATH():
     return "prompts.json"
 
 
-def open_prompts():
+def open_prompts() -> dict:
     """
     Open json file
-    :return:
+
+    :postcondition: dictionary containing freestyle prompts
+    :return: dict
     """
     with open(FREESTYLE_PROMPTS_PATH()) as json_object:
         return json.load(json_object)
