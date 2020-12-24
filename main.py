@@ -1,16 +1,24 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+"""
+Freestyling
+Nicholas Johnston
+December 23, 2020
+"""
+import utilities
+import random
 
 
-# Press the green button in the gutter to run the script.
+def freestyle_driver(freestyle_prompts: dict):
+    while True:
+        word_key = str(random.randint(1 , len(freestyle_prompts)))
+        prompt = freestyle_prompts[word_key]
+        print(prompt)
+        input()
+
+
+def main():
+    prompts = utilities.open_prompts()
+    freestyle_driver(prompts)
+
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    main()
